@@ -1,0 +1,20 @@
+@import "./css/main.css";
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-image: url("https://g-grafolio.pstatic.net/20220928_176/16643643611613EIxP_PNG/%BF%CF%B5%CE%C4%B7%C7%CE%BD%C3%B8%AE%C1%EE03-%C4%C4.png?type=w896_2");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
