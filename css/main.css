@@ -25,6 +25,7 @@ input.search {
   text-align: center;
   border-radius: 50px;
   cursor: pointer;
+  transition: all;
 }
 .tools i {
   font-size: 30px;
@@ -32,6 +33,9 @@ input.search {
   z-index: -1;
 }
 
+.hide {
+  visibility: hidden !important;
+}
 .hidden {
   display: none !important;
 }
@@ -42,4 +46,23 @@ input.search {
   margin: 50px;
   font-size: 30px;
   bottom: 0;
+}
+
+@keyframes sizeBigger {
+  from {
+    width: 60px;
+    height: 60px;
+  }
+  to {
+    width: 500px;
+    height: 400px;
+  }
+}
+
+.focused {
+  animation: sizeBigger 0.5s forwards;
+}
+
+.button {
+  z-index: -1;
 }

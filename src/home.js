@@ -1,8 +1,19 @@
-const toolsList = Array.from(document.querySelectorAll(".tools div"));
+const toolsList = Array.from(document.querySelectorAll(".tools > div"));
 const backBtn = document.querySelector(".back");
 const HIDDEN = "hidden";
+const HIDE = "hide";
+const FOCUSED = "focused";
 
-function toolFocus(event) {
+async function toolFocus(event) {
+  const clickedIcon = event.target.querySelector(".button");
+  clickedIcon.classList.add(HIDDEN);
+  clicked_button = clickedIcon;
+  for (let i = 0; i < toolsList.length; i++) {
+    toolsList[i].classList.add(HIDE);
+  }
+  event.target.classList.remove(HIDE);
+  event.target.classList.add(FOCUSED);
+  await sleep(1000);
   for (let i = 0; i < toolsList.length; i++) {
     toolsList[i].classList.add(HIDDEN);
   }
@@ -12,8 +23,16 @@ function toolFocus(event) {
 function resetPage() {
   for (let i = 0; i < toolsList.length; i++) {
     toolsList[i].classList.remove(HIDDEN);
+    toolsList[i].classList.remove(HIDE);
+    toolsList[i].classList.remove(FOCUSED);
+    const toolsBtn = toolsList[i].querySelector(".button");
+    toolsBtn.classList.remove(HIDDEN);
   }
   backBtn.classList.add(HIDDEN);
+}
+
+function sleep(ms) {
+  return new Promise((r) => setTimeout(r, ms));
 }
 
 toolsList.forEach((tool) => tool.addEventListener("click", toolFocus));
