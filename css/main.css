@@ -5,24 +5,27 @@
 
 input.search {
   all: unset;
-  background-color: white;
+  background-color: black;
   border-radius: 30px;
   width: 400px;
   height: 50px;
   margin: 30px;
+  padding-left: 20px;
 }
 
 .tools {
   display: flex;
+
   gap: 10px;
 }
-.tools div {
+.tools > div {
   width: 60px;
   height: 60px;
   border: 1px solid white;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: center;
   border-radius: 50px;
   cursor: pointer;
   transition: all;
@@ -45,7 +48,7 @@ input.search {
   cursor: pointer;
   margin: 50px;
   font-size: 30px;
-  bottom: 0;
+  bottom: -30px;
 }
 
 @keyframes sizeBigger {
@@ -54,15 +57,17 @@ input.search {
     height: 60px;
   }
   to {
-    width: 500px;
-    height: 400px;
+    width: 450px;
+    height: 350px;
   }
 }
 
 .focused {
   animation: sizeBigger 0.5s forwards;
+  cursor: auto !important;
 }
 
 .button {
   z-index: -1;
+  display: flex;
 }
