@@ -1,4 +1,12 @@
 @import "./css/main.css";
+@import "./css/analogClock.css";
+@import "./css/calculator.css";
+@import "./css/calendar.css";
+@import "./css/digitalClock.css";
+@import "./css/exchangeCalculator.css";
+@import "./css/timer.css";
+@import "./css/translator.css";
+@import "./css/worldTime.css";
 
 html,
 body {
@@ -6,11 +14,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+
   color: white;
 }
 
 body {
+  margin: 50px 0;
   height: 100%;
   width: 100%;
   background-image: url("https://g-grafolio.pstatic.net/20220928_176/16643643611613EIxP_PNG/%BF%CF%B5%CE%C4%B7%C7%CE%BD%C3%B8%AE%C1%EE03-%C4%C4.png?type=w896_2");
