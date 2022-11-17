@@ -1,0 +1,59 @@
+/* 환율 계산기 */
+
+.exchange-cal.focused {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.exchange-cal__form {
+  display: grid;
+  grid-template-columns: 5fr 1fr 5fr;
+  grid-template-rows: 3fr 1fr;
+  gap: 20px;
+  width: 450px;
+  height: 250px;
+  box-sizing: border-box;
+  padding: 0px 20px;
+}
+
+.exchange-cal__container:first-child {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+.exchange-cal__container:nth-child(2) {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+}
+.exchange-cal__container:nth-child(3) {
+  grid-row: 1 / 2;
+  grid-column: 3 / 4;
+}
+.exchange-cal__container:last-child {
+  grid-row: 2 / 3;
+  grid-column: 1 / 4;
+}
+
+.exchange-cal__dropdown-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+.exchange-cal__dropdown-content {
+  position: relative;
+  left: 0px;
+  width: 100px;
+  height: 25px;
+  background-color: #fff;
+  color: steelblue;
+  text-decoration: none;
+  line-height: 25px;
+  text-align: center;
+}
+
+.exchange-cal__dropdown-content:hover {
+  background-color: aliceblue;
+}
+
+.exchange-cal__input {
+  width: 100px;
+}
