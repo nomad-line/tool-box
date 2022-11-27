@@ -3,14 +3,26 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: #fff;
 }
-.calculator {
+
+.calculator .display {
+  display: flex;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: flex-end;
+  align-items: flex-end;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+}
+
+.keyboard {
   display: grid;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(6, 100px);
   gap: 1px;
 }
-.calculator div {
+.keyboard div {
   background-color: rgb(235, 231, 231);
   display: flex;
   justify-content: center;
@@ -19,15 +31,14 @@ body {
   font-weight: 700;
 }
 
-.calculator .display {
-  grid-column: 4 span;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.calculator div:nth-of-type(2) {
+.keyboard div:first-of-type {
   grid-column: 2 span;
 }
 
-.calculator div:last-of-type {
+.keyboard div:last-of-type {
   grid-column: 2 span;
+}
+.keyboard div:hover {
+  background-color: #fff;
+  cursor: pointer;
 }
