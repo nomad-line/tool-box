@@ -8,18 +8,19 @@ body {
 
 .calculator .display {
   display: flex;
+  width: 403px;
   height: 100px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   justify-content: flex-end;
   align-items: flex-end;
   box-sizing: border-box;
-  padding-bottom: 20px;
+  padding: 10px;
 }
 
 .keyboard {
   display: grid;
   grid-template-columns: repeat(4, 100px);
-  grid-template-rows: repeat(6, 100px);
+  grid-template-rows: repeat(5, 100px);
   gap: 1px;
 }
 .keyboard div {
@@ -41,4 +42,22 @@ body {
 .keyboard div:hover {
   background-color: #fff;
   cursor: pointer;
+}
+.display {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: flex-end;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+  height: 100%;
+}
+.current-operand {
+  color: #fff;
+  font-size: 2.5rem;
+  height: 100%;
 }
