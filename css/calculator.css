@@ -3,7 +3,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #fff;
+  background: linear-gradient(to right, #fdbb2d, #22c1c3);
 }
 
 .calculator .display {
