@@ -66,7 +66,51 @@
           <i class="fas fa-dollar-sign"></i><i class="fas fa-euro-sign"></i>
         </div>
         <div class="exchange-cal_function hidden">
-          exchange-cal<!-- 안에 내용 지우고내용  추가-->
+          <form class="exchange-cal__form">
+            <div class="exchange-cal__container">
+              <label for="source" class="exchange-cal__label">금액</label>
+              <br />
+              <input
+                id="source"
+                type="number"
+                class="exchange-cal__input"
+                value="1000"
+              />
+              <button type="button" class="exchange-cal__dropdown--source">
+                KRW
+              </button>
+              <div
+                class="exchange-cal__dropdown-container exchange-cal__container--source hidden"
+              ></div>
+            </div>
+            <div class="exchange-cal__container">
+              <i
+                class="fa-solid fa-arrow-right-arrow-left change-icon"
+                id="exchange-cal__icon"
+              ></i>
+            </div>
+            <div class="exchange-cal__container">
+              <label for="target" class="exchange-cal__label">환전</label>
+              <br />
+              <input
+                id="target"
+                type="text"
+                class="exchange-cal__input"
+                readonly
+              />
+              <button type="button" class="exchange-cal__dropdown--target">
+                USD
+              </button>
+              <div
+                class="exchange-cal__dropdown-container exchange-cal__container--target hidden"
+              ></div>
+            </div>
+            <div class="exchange-cal__container">
+              <span class="exchange-cal__source-text">1.00000 KRW = </span>
+              <span class="exchange-cal__target-money">0.00075</span>
+              <span class="exchange-cal__target-iso">USD</span>
+            </div>
+          </form>
         </div>
       </div>
       <div class="translator">
